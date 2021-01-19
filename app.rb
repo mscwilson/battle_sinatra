@@ -21,7 +21,7 @@ get "/city" do
 end
 
 get "/cat" do
-  "<div>
-  <img src='https://www.scottishspca.org/sites/default/files/styles/full_content/public/2019-09/Buying%20a%20cat%201000x600.jpeg?itok=nvUseKh2'>
+  "<div style='border: 3px dashed deepskyblue'>
+  <img src='https://static.boredpanda.com/blog/wp-content/uploads/2016/11/pomeranian-dog-adopts-ginger-kitten-6.jpg'>
   </div>"
 end
