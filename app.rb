@@ -1,27 +1,11 @@
-require "sinatra"
+require "sinatra/base"
 
-get "/" do
-  "hello!"
-end
+class Battle < Sinatra::Base
 
-get "/secret" do
-  "hellooooooooooooo"
-end
+  get "/" do 
+    "Hello Battle!"
+  end
 
-get "/home" do
-  "this is the home page"
-end
+  run! if app_file == $0
 
-get "/dogs" do
-  "pomeranians"
-end
-
-get "/city" do
-  "London"
-end
-
-get "/cat" do
-  "<div style='border: 3px dashed deepskyblue'>
-  <img src='https://static.boredpanda.com/blog/wp-content/uploads/2016/11/pomeranian-dog-adopts-ginger-kitten-6.jpg'>
-  </div>"
 end
