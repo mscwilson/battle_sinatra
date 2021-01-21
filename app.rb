@@ -4,9 +4,6 @@ require "player"
 class Battle < Sinatra::Base
   enable :sessions
 
-  STARTING_HIT_POINTS = 20
-  ATTACK_DAMAGE = 5
-
   get "/" do
     erb(:index)
   end
@@ -20,12 +17,14 @@ class Battle < Sinatra::Base
   get "/play" do
     @p1name = $player1.name
     @p2name = $player2.name
+    @p2_hp = $player2.hit_points
     erb :play
   end
 
   get "/attack" do
     @p1name = $player1.name
     @p2name = $player2.name
+    $player2.lose_health
     erb :attack_confirmation
   end
 
