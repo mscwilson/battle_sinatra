@@ -22,12 +22,7 @@ class Battle < Sinatra::Base
     erb :play
   end
 
-  post "/attack" do
-    # session[:p2hp] = STARTING_HIT_POINTS - ATTACK_DAMAGE
-    redirect "/attack_confirmation"
-  end
-
-  get "/attack_confirmation" do
+  get "/attack" do
     @p1name = session[:p1name]
     @p2name = session[:p2name]
     erb :attack_confirmation
