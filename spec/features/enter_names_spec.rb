@@ -1,11 +1,8 @@
 feature "entering names" do
 
   scenario "display names off a form" do
-    visit "/"
-    fill_in "p1name", with: "Ash"
-    fill_in "p2name", with: "Gary"
-    click_button "Submit names"
-    expect(page).to have_text "Gary"
+    sign_in_and_play
+    expect(page).to have_text "Ash! - versus - Gary!"
   end
 
 
