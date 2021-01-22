@@ -18,10 +18,9 @@ class Game
 
   def attack
     player_being_attacked.lose_health
-    swap_players
   end
 
-  private #---------------------------------------------
+  # private #---------------------------------------------
 
   def swap_players
     @players.reverse!

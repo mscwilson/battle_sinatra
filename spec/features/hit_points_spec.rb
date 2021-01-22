@@ -21,8 +21,7 @@ feature "hit points" do
 
   scenario "P1 attack reduces P2 HP" do
     sign_in_and_play
-    click_button "Attack"
-    click_link "Great"
+    attack_and_confirmation
     expect(page).not_to have_content "Gary: 50 HP"
     expect(page).to have_content "Gary: 40 HP"
   end

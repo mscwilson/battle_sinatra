@@ -23,10 +23,13 @@ class Battle < Sinatra::Base
 
   get "/attack" do
     @game = $game
-    @current_player = @game.current_player
-    @player_being_attacked = @game.player_being_attacked
     @game.attack
     erb :attack_confirmation
+  end
+
+  post "/swap_players" do
+    $game.swap_players
+    redirect "/play"
   end
 
   run! if app_file == $0

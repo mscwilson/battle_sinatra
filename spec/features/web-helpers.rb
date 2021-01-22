@@ -7,5 +7,5 @@ end
 
 def attack_and_confirmation
   click_button "Attack"
-  click_link "Great"
+  click_button "Great"
 end

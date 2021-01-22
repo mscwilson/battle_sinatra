@@ -15,9 +15,8 @@ describe Game do
     @game.attack
   end
 
-  it "swaps active player after attack" do
-    allow(player2).to receive(:lose_health)
-    @game.attack
+  it "swaps active player" do
+    @game.swap_players
     expect(@game.current_player).to be player2
   end
 
