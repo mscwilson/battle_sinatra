@@ -13,9 +13,4 @@ class Player
     @hit_points -= DAMAGE_POINTS
   end
 
-  def attack(player)
-    player.lose_health
-  end
-
-
 end
