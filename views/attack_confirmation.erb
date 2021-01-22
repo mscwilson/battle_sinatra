@@ -1,5 +1,12 @@
 <%= @game.current_player.name %> attacked <%= @game.player_being_attacked.name %>!
+<%= @game.player_being_attacked.name %> lost 10 HP.
 
-<form action="/swap_players" method="post">
-<input type="submit" value="Great">
-</form>
+<% if !@game.ended? %>
+  <form action="/swap_players" method="post">
+  <input type="submit" value="Great">
+  </form>
+<% else %>
+  <form action="/play" method="get">
+  <input type="submit" value="Great">
+  </form>
+<% end %>

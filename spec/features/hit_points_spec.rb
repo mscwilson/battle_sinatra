@@ -26,6 +26,14 @@ feature "hit points" do
     expect(page).to have_content "Gary: 40 HP"
   end
 
+  scenario "a player gets to 0HP and loses the game" do
+    sign_in_and_play
+    attack_repeatedly_to_kill_p2
+    expect(page).to have_text "Gary: 0 HP"
+    expect(page).to have_text "Ash is the winner!!"
+    
+  end
+
 
 
 end

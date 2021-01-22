@@ -20,6 +20,10 @@ class Game
     player_being_attacked.lose_health
   end
 
+  def ended?
+    player1.hit_points == 0 || player2.hit_points == 0
+  end
+
   # private #---------------------------------------------
 
   def swap_players
