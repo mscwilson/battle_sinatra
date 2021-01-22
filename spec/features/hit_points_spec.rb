@@ -12,6 +12,13 @@ feature "hit points" do
     expect(page).to have_text "Ash attacked Gary!"
   end
 
+  scenario "P2 attacks P1" do
+    sign_in_and_play
+    attack_and_confirmation
+    click_button "Attack"
+    expect(page).to have_text "Gary attacked Ash!"
+  end
+
   scenario "P1 attack reduces P2 HP" do
     sign_in_and_play
     click_button "Attack"
