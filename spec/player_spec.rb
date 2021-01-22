@@ -17,11 +17,5 @@ describe Player do
   it "loses HP in attack" do
     expect { player2.lose_health }.to change { player2.hit_points }.by (- Player::DAMAGE_POINTS)
   end
-
-  it "can attack other player" do
-    expect(player2).to receive(:lose_health)
-    player1.attack(player2)
-  end
-
     
 end
