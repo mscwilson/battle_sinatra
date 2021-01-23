@@ -9,5 +9,5 @@
   <input type="submit" value="Attack">
   </form>
 <% else %>
-  <%= @game.current_player.name %> is the winner!!
+  <%= @game.current_player.name %> is the winner!! <%= @game.player_being_attacked.name %> has lost.
 <% end %>

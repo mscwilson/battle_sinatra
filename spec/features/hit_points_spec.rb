@@ -30,10 +30,7 @@ feature "hit points" do
     sign_in_and_play
     attack_repeatedly_to_kill_p2
     expect(page).to have_text "Gary: 0 HP"
-    expect(page).to have_text "Ash is the winner!!"
-    
+    expect(page).to have_text "Ash is the winner!! Gary has lost."
   end
-
-
 
 end
